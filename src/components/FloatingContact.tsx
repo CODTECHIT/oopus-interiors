@@ -36,53 +36,50 @@ const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col-reverse items-end gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {/* Contact Options */}
-      {contactOptions.map((option, index) => (
+      {[...contactOptions].reverse().map((option, index) => (
         <a
           key={option.name}
           href={option.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`flex items-center gap-3 transition-all duration-300 ${
-            isOpen
+          className={`flex items-center gap-3 transition-all duration-300 ${isOpen
               ? "opacity-100 translate-y-0 pointer-events-auto"
-              : "opacity-0 translate-y-4 pointer-events-none"
-          }`}
+              : "opacity-0 translate-y-2 pointer-events-none"
+            }`}
           style={{
-            transitionDelay: isOpen ? `${option.delay}s` : "0s",
+            transitionDelay: isOpen ? `${index * 0.05}s` : "0s",
           }}
           aria-label={option.name}
         >
           {/* Label */}
           <span
-            className={`hidden sm:block px-3 py-1.5 rounded-lg bg-card/90 backdrop-blur-sm text-sm font-medium text-foreground shadow-lg border border-border/50 transition-all duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0"
-            }`}
+            className={`hidden sm:block px-3 py-1.5 rounded-lg bg-card/90 backdrop-blur-sm text-sm font-medium text-foreground shadow-lg border border-border/50 transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0"
+              }`}
           >
             {option.name}
           </span>
 
           {/* Icon Button */}
           <div
-            className={`w-12 h-12 rounded-full ${option.color} flex items-center justify-center shadow-lg transition-all duration-300 border-2 border-transparent hover:border-accent/50`}
+            className={`w-12 h-12 rounded-full ${option.color} flex items-center justify-center shadow-lg transition-all duration-300 border-2 border-transparent hover:border-accent/50 group`}
             style={{
               boxShadow: "0 0 20px hsla(40, 44%, 41%, 0.3)",
             }}
           >
-            <option.icon className="w-5 h-5 text-foreground" />
+            <option.icon className="w-5 h-5 text-white" />
           </div>
         </a>
       ))}
 
-      {/* Main Toggle Button */}
+      {/* Main Toggle Button - Always at the bottom */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 border-2 ${
-          isOpen
-            ? "bg-card border-accent/50 rotate-0"
+        className={`w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-500 border-2 ${isOpen
+            ? "bg-card border-accent/50 rotate-90"
             : "bg-gradient-to-br from-accent to-gold-light border-transparent animate-pulse-glow"
-        }`}
+          }`}
         aria-label={isOpen ? "Close contact menu" : "Open contact menu"}
       >
         {isOpen ? (
