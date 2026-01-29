@@ -7,17 +7,17 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, category, image, description }: ProjectCardProps) => {
   return (
-    <div className="glow-card group overflow-hidden transform-gpu">
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden isolate" style={{ maskImage: 'linear-gradient(to bottom, black, black)' }}>
+    <div className="glow-card group overflow-hidden bg-primary/50">
+      {/* Image Container with Safety Background */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-black isolate">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out scale-[1.01] group-hover:scale-110 transform-gpu block"
-          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
+          style={{ transform: 'translate3d(0,0,0) scale(1.02)' }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500 transform-gpu pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none" />
 
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
