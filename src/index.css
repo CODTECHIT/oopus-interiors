@@ -182,40 +182,30 @@
 
   /* Premium Button Styles */
   .btn-gold {
-    @apply relative overflow-hidden bg-gradient-to-r from-accent to-gold-light text-background font-medium px-8 py-4 rounded-lg transition-all duration-300;
-  }
-
-  .btn-gold::before {
-    content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-gold-light to-accent opacity-0 transition-opacity duration-300;
-  }
-
-  .btn-gold:hover::before {
-    @apply opacity-100;
+    @apply relative overflow-hidden bg-gradient-to-r from-accent to-gold-light text-royal-blue-deep font-bold px-8 py-4 rounded-lg transition-all duration-300;
   }
 
   .btn-gold:hover {
-    box-shadow: 0 0 30px hsla(40, 44%, 41%, 0.5);
+    @apply text-royal-blue-deep;
+    box-shadow: 0 0 30px hsla(40, 50%, 48%, 0.5);
     transform: translateY(-2px);
-  }
-
-  .btn-gold span {
-    @apply relative z-10;
   }
 
   /* Outline Gold Button */
   .btn-gold-outline {
-    @apply relative border-2 border-accent text-accent px-8 py-4 rounded-lg transition-all duration-300 overflow-hidden;
+    @apply relative border-2 border-accent text-accent font-semibold px-8 py-4 rounded-lg transition-all duration-300 overflow-hidden;
+    z-index: 1;
   }
 
   .btn-gold-outline::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-accent to-gold-light opacity-0 transition-opacity duration-300 -z-10;
+    @apply absolute inset-0 bg-gradient-to-r from-accent to-gold-light opacity-0 transition-opacity duration-300;
+    z-index: -1;
   }
 
   .btn-gold-outline:hover {
-    @apply text-background;
-    box-shadow: 0 0 30px hsla(40, 44%, 41%, 0.4);
+    @apply text-royal-blue-deep;
+    box-shadow: 0 0 30px hsla(40, 50%, 48%, 0.4);
   }
 
   .btn-gold-outline:hover::before {
