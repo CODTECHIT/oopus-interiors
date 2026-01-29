@@ -13,7 +13,7 @@ import imgCarpentry from "@/assets/services/carpentry-services.jpg";
 import imgElectrical from "@/assets/services/electrical-works.jpg";
 import imgPainting from "@/assets/services/painting.jpg";
 import imgGypsum from "@/assets/services/gypsum-ceiling.jpg";
-import imgACPiping from "@/assets/services/ac-copper-piping.jpg";
+import imgACPiping from "@/assets/services/ac-unit.jpg";
 import imgGasPiping from "@/assets/services/gas-copper-piping.jpg";
 import imgGranite from "@/assets/services/granite-work.jpg";
 import imgBar from "@/assets/services/bar-counter.jpg";
@@ -76,7 +76,7 @@ const allServices = [
     category: "Utilities & Infrastructure",
     services: [
       {
-        title: "AC Copper Piping",
+        title: "AC Installation",
         description: "Professional AC installation with concealed copper piping for split units.",
         image: imgACPiping,
       },
@@ -166,10 +166,10 @@ const Services = () => {
             <SectionHeading subtitle={`0${categoryIndex + 1}`} title={category.category} />
 
             <div className={`grid gap-6 ${category.services.length === 1
-                ? "grid-cols-1 max-w-md mx-auto"
-                : category.services.length === 2
-                  ? "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
-                  : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+              ? "grid-cols-1 max-w-md mx-auto"
+              : category.services.length === 2
+                ? "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
+                : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
               }`}>
               {category.services.map((service, index) => (
                 <div
