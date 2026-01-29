@@ -96,14 +96,14 @@ const Index = () => {
         <div className="relative section-container py-32 text-center">
           <div className="max-w-4xl mx-auto">
             <span className="inline-block text-accent font-medium text-sm tracking-wider uppercase mb-6 animate-fade-in">
-              Premium Turnkey Interiors
+              Leading Turnkey Interior Solutions
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-foreground mb-6 animate-fade-in-up">
               One Step for{" "}
               <span className="text-gradient-gold text-shadow-gold">Complete Interior</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up stagger-1">
-              From design to final execution, we handle everything under one roof. 
+              From design to final execution, we handle everything under one roof.
               Your vision becomes our responsibility.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up stagger-2">
@@ -270,7 +270,7 @@ const Index = () => {
               Ready to Transform Your Space?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              Take the first step towards your dream interior. Get a free consultation 
+              Take the first step towards your dream interior. Get a free consultation
               and let us show you how we can bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
