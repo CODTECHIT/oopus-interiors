@@ -31,11 +31,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-premium shadow-lg border-b border-border/30"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+          ? "bg-background shadow-lg border-b border-border/30"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-20">
@@ -53,11 +52,10 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 gold-underline ${
-                  location.pathname === link.path
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 gold-underline ${location.pathname === link.path
                     ? "text-accent"
                     : "text-foreground/80 hover:text-accent"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -85,20 +83,18 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-premium border-b border-border/30 transition-all duration-500 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`lg:hidden absolute top-full left-0 right-0 bg-background border-b border-border/30 transition-all duration-500 overflow-hidden ${isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="section-container py-4 space-y-1">
           {navLinks.map((link, index) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`block px-4 py-3 text-base font-medium transition-all duration-300 rounded-lg ${
-                location.pathname === link.path
+              className={`block px-4 py-3 text-base font-medium transition-all duration-300 rounded-lg ${location.pathname === link.path
                   ? "text-accent bg-accent/10"
                   : "text-foreground/80 hover:text-accent hover:bg-accent/5"
-              }`}
+                }`}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               {link.name}
