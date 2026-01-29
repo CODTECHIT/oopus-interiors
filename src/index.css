@@ -124,12 +124,18 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
 
 @layer components {
+
   /* Neon Glow Card Effect - Improved visibility */
   .glow-card {
     @apply relative overflow-hidden rounded-xl bg-card backdrop-blur-sm transition-all duration-500;
@@ -150,9 +156,9 @@
   }
 
   .glow-card:hover {
-    @apply transform -translate-y-1;
-    border-color: hsla(40, 50%, 48%, 0.5);
-    box-shadow: 0 8px 40px hsla(40, 50%, 48%, 0.2), 0 4px 20px hsla(213, 80%, 8%, 0.3);
+    @apply scale-[1.02];
+    border-color: hsla(40, 50%, 48%, 0.6);
+    box-shadow: 0 10px 40px hsla(40, 50%, 48%, 0.25);
   }
 
   /* Gold Gradient Text */
@@ -243,6 +249,7 @@
 }
 
 @layer utilities {
+
   /* Text Shadows */
   .text-shadow-gold {
     text-shadow: 0 0 20px hsla(40, 44%, 41%, 0.5);
@@ -259,36 +266,36 @@
 
   /* Gradient Overlays - Refined for better readability */
   .gradient-overlay-dark {
-    background: linear-gradient(to bottom, 
-      hsla(213, 80%, 10%, 0.85) 0%, 
-      hsla(213, 80%, 12%, 0.75) 50%, 
-      hsla(213, 80%, 10%, 0.9) 100%
-    );
+    background: linear-gradient(to bottom,
+        hsla(213, 80%, 10%, 0.85) 0%,
+        hsla(213, 80%, 12%, 0.75) 50%,
+        hsla(213, 80%, 10%, 0.9) 100%);
   }
 
   .gradient-overlay-gold {
-    background: linear-gradient(135deg, 
-      hsla(40, 50%, 48%, 0.08) 0%, 
-      transparent 40%, 
-      hsla(40, 50%, 48%, 0.04) 100%
-    );
+    background: linear-gradient(135deg,
+        hsla(40, 50%, 48%, 0.08) 0%,
+        transparent 40%,
+        hsla(40, 50%, 48%, 0.04) 100%);
   }
 
   /* Image overlay for text readability */
   .image-overlay {
     background: linear-gradient(to bottom,
-      hsla(213, 80%, 10%, 0.7) 0%,
-      hsla(213, 80%, 12%, 0.5) 50%,
-      hsla(213, 80%, 10%, 0.8) 100%
-    );
+        hsla(213, 80%, 10%, 0.7) 0%,
+        hsla(213, 80%, 12%, 0.5) 50%,
+        hsla(213, 80%, 10%, 0.8) 100%);
   }
 }
 
 /* Keyframe Animations */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -298,6 +305,7 @@
   0% {
     transform: translateX(0) scale(1);
   }
+
   100% {
     transform: translateX(-20px) scale(1.05);
   }
@@ -308,6 +316,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -318,6 +327,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -328,6 +338,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -339,6 +350,7 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -346,9 +358,12 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px hsla(40, 44%, 41%, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px hsla(40, 44%, 41%, 0.6);
   }
@@ -375,12 +390,29 @@
 }
 
 /* Stagger animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
-.stagger-6 { animation-delay: 0.6s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+.stagger-6 {
+  animation-delay: 0.6s;
+}
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {

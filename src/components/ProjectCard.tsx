@@ -13,11 +13,11 @@ const ProjectCard = ({ title, category, image, description }: ProjectCardProps) 
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
+          className="w-full h-full object-cover will-change-transform opacity-90 group-hover:opacity-100 transition-opacity duration-500"
           style={{ transform: 'translate3d(0,0,0) scale(1.02)' }}
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none" />
 
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
