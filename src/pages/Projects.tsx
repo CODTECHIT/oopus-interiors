@@ -86,7 +86,7 @@ const Projects = () => {
               <span className="text-gradient-gold">Projects</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Explore our collection of completed projects showcasing our commitment 
+              Explore our collection of completed projects showcasing our commitment
               to quality, craftsmanship, and execution excellence.
             </p>
           </div>
@@ -102,11 +102,10 @@ const Projects = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
                     ? "bg-accent text-background"
                     : "bg-card border border-border text-muted-foreground hover:text-accent hover:border-accent/50"
-                }`}
+                  }`}
               >
                 {category}
               </button>
@@ -118,8 +117,8 @@ const Projects = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                className="reveal reveal-up"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <ProjectCard {...project} />
               </div>
@@ -137,7 +136,7 @@ const Projects = () => {
               Want to See More?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              We'd love to show you more of our work and discuss how we can transform 
+              We'd love to show you more of our work and discuss how we can transform
               your space. Get in touch for a detailed portfolio presentation.
             </p>
             <a

@@ -148,7 +148,7 @@ const Services = () => {
               <span className="text-gradient-gold">Solutions</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              From initial design concepts to final execution, we offer comprehensive 
+              From initial design concepts to final execution, we offer comprehensive
               interior services under one roof. One team, one responsibility.
             </p>
           </div>
@@ -159,25 +159,23 @@ const Services = () => {
       {allServices.map((category, categoryIndex) => (
         <section
           key={category.category}
-          className={`relative py-16 ${
-            categoryIndex % 2 === 1 ? "bg-gradient-to-b from-primary/30 via-background to-background" : ""
-          }`}
+          className={`relative py-16 ${categoryIndex % 2 === 1 ? "bg-gradient-to-b from-primary/30 via-background to-background" : ""
+            }`}
         >
           <div className="section-container">
             <SectionHeading subtitle={`0${categoryIndex + 1}`} title={category.category} />
 
-            <div className={`grid gap-6 ${
-              category.services.length === 1 
-                ? "grid-cols-1 max-w-md mx-auto" 
-                : category.services.length === 2 
+            <div className={`grid gap-6 ${category.services.length === 1
+                ? "grid-cols-1 max-w-md mx-auto"
+                : category.services.length === 2
                   ? "grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto"
                   : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-            }`}>
+              }`}>
               {category.services.map((service, index) => (
                 <div
                   key={service.title}
-                  className="opacity-0 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                  className="reveal reveal-up"
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <ServiceCardWithImage {...service} />
                 </div>
@@ -206,8 +204,8 @@ const Services = () => {
               ].map((item, index) => (
                 <div
                   key={item.step}
-                  className="relative text-center opacity-0 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.15}s`, animationFillMode: "forwards" }}
+                  className="relative text-center reveal reveal-up"
+                  style={{ transitionDelay: `${index * 150}ms` }}
                 >
                   <div className="glow-card p-6">
                     <span className="text-4xl font-serif font-bold text-gradient-gold">
@@ -238,7 +236,7 @@ const Services = () => {
               Need a Custom Solution?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              Every space is unique. Let's discuss your specific requirements and 
+              Every space is unique. Let's discuss your specific requirements and
               create a tailored plan for your interior project.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -146,8 +146,8 @@ const Index = () => {
             {featuredProjects.map((project, index) => (
               <div
                 key={project.title}
-                className="opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.15}s`, animationFillMode: "forwards" }}
+                className="reveal reveal-up"
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <ProjectCard {...project} />
               </div>
@@ -176,8 +176,8 @@ const Index = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                className="reveal reveal-up"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <ServiceCard {...service} />
               </div>
@@ -218,8 +218,8 @@ const Index = () => {
                 {whyChooseUs.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 text-foreground/90 opacity-0 animate-slide-in-right"
-                    style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                    className="flex items-center gap-3 text-foreground/90 reveal reveal-right"
+                    style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                     <span>{item.text}</span>

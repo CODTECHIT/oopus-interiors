@@ -59,7 +59,7 @@ const Contact = () => {
               <span className="text-gradient-gold">Project</span>
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Ready to transform your space? We're just a message away. 
+              Ready to transform your space? We're just a message away.
               Reach out through any of the channels below.
             </p>
           </div>
@@ -76,21 +76,18 @@ const Contact = () => {
                 href={method.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`glow-card group p-6 md:p-8 flex items-start gap-5 opacity-0 animate-fade-in-up ${
-                  method.primary ? "md:col-span-2" : ""
-                }`}
-                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                className={`glow-card group p-6 md:p-8 flex items-start gap-5 reveal reveal-up ${method.primary ? "md:col-span-2" : ""
+                  }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className={`w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center border transition-all duration-300 ${
-                  method.primary 
-                    ? "bg-accent/20 border-accent/50 group-hover:bg-accent group-hover:border-accent" 
-                    : "bg-accent/10 border-accent/30 group-hover:border-accent/50"
-                }`}>
-                  <method.icon className={`w-6 h-6 transition-colors duration-300 ${
-                    method.primary 
-                      ? "text-accent group-hover:text-background" 
-                      : "text-accent"
-                  }`} />
+                <div className={`w-14 h-14 flex-shrink-0 rounded-xl flex items-center justify-center border transition-all duration-300 ${method.primary
+                  ? "bg-accent/20 border-accent/50 group-hover:bg-accent group-hover:border-accent"
+                  : "bg-accent/10 border-accent/30 group-hover:border-accent/50"
+                  }`}>
+                  <method.icon className={`w-6 h-6 transition-colors duration-300 ${method.primary
+                    ? "text-accent group-hover:text-background"
+                    : "text-accent"
+                    }`} />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-serif font-semibold text-foreground group-hover:text-accent transition-colors duration-300">
@@ -120,7 +117,7 @@ const Contact = () => {
                 </h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                We operate across Hyderabad and surrounding areas in Telangana, India. 
+                We operate across Hyderabad and surrounding areas in Telangana, India.
                 We're happy to discuss projects in other locations as well.
               </p>
               <p className="text-accent mt-4 font-medium">
@@ -185,8 +182,8 @@ const Contact = () => {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="glow-card p-6 opacity-0 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "forwards" }}
+                className="glow-card p-6 reveal reveal-up"
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <h4 className="text-lg font-serif font-semibold text-foreground mb-2">
                   {faq.q}
@@ -206,7 +203,7 @@ const Contact = () => {
               Ready to Transform Your Space?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-              Take the first step. A simple message today can become your 
+              Take the first step. A simple message today can become your
               dream space tomorrow.
             </p>
             <a
