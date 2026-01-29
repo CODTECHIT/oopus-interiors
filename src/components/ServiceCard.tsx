@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon: Icon, features }: ServiceCardProps) => {
   return (
-    <div className="glow-card group p-6 md:p-8 h-full">
+    <div className="glow-card group p-6 md:p-8 h-full transform-gpu">
       {/* Icon */}
       <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center border border-accent/30 group-hover:border-accent/50 transition-all duration-500">
         <Icon className="w-7 h-7 text-accent group-hover:scale-110 transition-transform duration-500" />
