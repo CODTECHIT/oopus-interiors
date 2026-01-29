@@ -135,6 +135,8 @@
     @apply relative overflow-hidden rounded-xl bg-card backdrop-blur-sm transition-all duration-500;
     border: 1px solid hsla(40, 50%, 48%, 0.25);
     box-shadow: 0 4px 20px hsla(213, 80%, 8%, 0.4);
+    backface-visibility: hidden;
+    will-change: transform, box-shadow;
   }
 
   .glow-card::before {
